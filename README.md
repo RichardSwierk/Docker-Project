@@ -8,15 +8,16 @@ Docker Project for SYS-265-05
 ### Documentation
 
 #### On docker01
-```
+``
 root@ubuntu:# mkdir docker_wp
-```
-```
+``
+``
 root@ubuntu:# cd docker_wp
-```
-```
+``
+``
 root@ubuntu:# nano docker-compose.yml
-```
+``
+
 ```
 version: '2'
 services:
