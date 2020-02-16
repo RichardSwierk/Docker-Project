@@ -16,7 +16,7 @@ Mkdir docker_wp
 Cd docker_wp
 
 Nano docker-compose.yml
-“
+"""
 version: '2'
 services:
 database:
@@ -32,13 +32,13 @@ networks:
 back:
 volumes:
 Database_data:
-“
+"""
 
 docker-compose up -d
 Docker ps -a
 
 Nano docker-compose.yml
-“
+"""
 phpmyadmin:
 depends_on:
 - database
@@ -51,7 +51,7 @@ PMA_HOST: database
 MYSQL_ROOT_PASSWORD: root
 networks:
 - back
-“
+"""
 
 Docker-compose up -d
 Docker ps -a
@@ -63,7 +63,7 @@ Password: root
 
 #### On docker01
 Nano docker-compose.yml
-“
+"""
 wordpress:
 depends_on:
 - database
@@ -79,7 +79,7 @@ ports:
 - 443:443
 networks:
 - back
-“
+"""
 
 Docker-compose up -d
 Docker ps -a
@@ -97,23 +97,23 @@ Click Plugins on the left side and remove “Hello Dolly” by:
 Cd wp-content/plugins/
 Rm hello.php
 
-*Removing default themes
+*Removing default themes*
 Cd wp-content/themes/
 Rm -rf twenty*
 
-*Getting our own theme
+*Getting our own theme*
 Wget https://downloads.wordpress.org/theme/nisarg.1.2.6.zip
 Unzip nisarg.1.2.6.zip
 Rm -rf nisarg.1.2.6.zip
 
-*if unzip isn’t installed
+*if unzip isn’t installed*
 Sudo apt-get install -y unzip
 
 #### On mgmt01
 On the left side click Appearance and Themes and activate the Nisarg theme
 
 #### On docker01
-*We’re going to update WordPress
+*We’re going to update WordPress*
 
 Nano docker-compose.yml
 Change image to WordPress:5.3.2
