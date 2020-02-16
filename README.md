@@ -8,10 +8,15 @@ Docker Project for SYS-265-05
 ### Documentation
 
 #### On docker01
-Mkdir docker_wp
-Cd docker_wp
-
-Nano docker-compose.yml
+```
+root@ubuntu:# mkdir docker_wp
+```
+```
+root@ubuntu:# cd docker_wp
+```
+```
+root@ubuntu:# nano docker-compose.yml
+```
 ```
 version: '2'
 services:
@@ -29,11 +34,15 @@ back:
 volumes:
 Database_data:
 ```
-
-docker-compose up -d
-Docker ps -a
-
-Nano docker-compose.yml
+```
+root@ubuntu:# docker-compose up -d
+```
+```
+root@ubunut:# docker ps -a
+```
+```
+root@ubuntu:# nano docker-compose.yml
+```
 ```
 phpmyadmin:
 depends_on:
@@ -48,17 +57,21 @@ MYSQL_ROOT_PASSWORD: root
 networks:
 - back
 ```
-
-Docker-compose up -d
-Docker ps -a
-
+```
+root@ubuntu:# docker-compose up -d
+```
+```
+root@ubuntu:# docker ps -a
+```
 #### On mgmt01
 http://docker01-name:8080/
 Username: root
 Password: root
 
 #### On docker01
-Nano docker-compose.yml
+```
+root@ubuntu:# nano docker-compose.yml
+```
 ```
 wordpress:
 depends_on:
@@ -76,9 +89,12 @@ ports:
 networks:
 - back
 ```
-
-Docker-compose up -d
-Docker ps -a
+```
+root@ubuntu:# docker-compose up -d
+```
+```
+root@ubuntu:# docker ps -a
+```
 
 #### On mgmt01
 http://docker01-name:80
@@ -90,34 +106,51 @@ Install WordPress
 Click Plugins on the left side and remove “Hello Dolly” by:
 
 #### On docker01
-Cd wp-content/plugins/
-Rm hello.php
-
+```
+root@ubuntu:# cd wp-content/plugins/
+```
+```
+root@ubuntu:# rm hello.php
+```
 *Removing default themes*
-Cd wp-content/themes/
-Rm -rf twenty*
-
+```
+root@ubuntu:# cd wp-content/themes/
+```
+```
+root@ubuntu:# rm -rf twenty*
+```
 *Getting our own theme*
-Wget https://downloads.wordpress.org/theme/nisarg.1.2.6.zip
-Unzip nisarg.1.2.6.zip
-Rm -rf nisarg.1.2.6.zip
-
+```
+root@ubuntu:# wget https://downloads.wordpress.org/theme/nisarg.1.2.6.zip
+```
+```
+root@ubuntu:# unzip nisarg.1.2.6.zip
+```
+```
+root@ubuntu:# rm -rf nisarg.1.2.6.zip
+```
 *if unzip isn’t installed*
-Sudo apt-get install -y unzip
-
+```
+root@ubuntu:# apt-get install -y unzip
+```
 #### On mgmt01
 On the left side click Appearance and Themes and activate the Nisarg theme
 
 #### On docker01
 *We’re going to update WordPress*
-
-Nano docker-compose.yml
+```
+root@ubuntu:# nano docker-compose.yml
+```
 Change image to WordPress:5.3.2
-
-Docker stop dockerwp_wordpress_1
-Docker rm dockerwp_wordpress_1
-Docker-compose up -d
-
+```
+root@ubuntu:# docker stop dockerwp_wordpress_1
+```
+```
+root@ubuntu:# docker rm dockerwp_wordpress_1
+```
+```
+root@ubuntu:# docker-compose up -d
+```
 #### On mgmt01
 Wait a minute for docker to reload
 Click update now
