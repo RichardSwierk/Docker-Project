@@ -8,16 +8,16 @@ Docker Project for SYS-265-05
 ### Documentation
 
 #### On docker01
-``
+```
 root@ubuntu:# mkdir docker_wp
-``
-``
+```
+```
 root@ubuntu:# cd docker_wp
-``
-``
+```
+```
 root@ubuntu:# nano docker-compose.yml
-``
-
+```
+Add the following to the docker-compose.yml
 ```
 version: '2'
 services:
@@ -35,6 +35,7 @@ back:
 volumes:
 Database_data:
 ```
+Save the docker-compose.yml file and exit it
 ```
 root@ubuntu:# docker-compose up -d
 ```
