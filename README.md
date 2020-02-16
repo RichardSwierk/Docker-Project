@@ -3,7 +3,7 @@ Docker Project for SYS-265-05
 
 
 ### Set up
-
+https://linoxide.com/containers/setup-wordpress-docker-ubuntu-16-04/
 
 ### Demo video
 
