@@ -12,7 +12,7 @@ Mkdir docker_wp
 Cd docker_wp
 
 Nano docker-compose.yml
-"""
+```
 version: '2'
 services:
 database:
@@ -28,7 +28,7 @@ networks:
 back:
 volumes:
 Database_data:
-"""
+```
 
 docker-compose up -d
 Docker ps -a
