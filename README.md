@@ -6,6 +6,6 @@ Docker Project for SYS-265-05
 
 Get the Nginx Docker image
 ```
-sudo docker pull nginx
+root@ubuntu:# docker pull nginx
 ```
 
