@@ -34,7 +34,7 @@ docker-compose up -d
 Docker ps -a
 
 Nano docker-compose.yml
-"""
+```
 phpmyadmin:
 depends_on:
 - database
@@ -47,7 +47,7 @@ PMA_HOST: database
 MYSQL_ROOT_PASSWORD: root
 networks:
 - back
-"""
+```
 
 Docker-compose up -d
 Docker ps -a
@@ -59,7 +59,7 @@ Password: root
 
 #### On docker01
 Nano docker-compose.yml
-"""
+```
 wordpress:
 depends_on:
 - database
@@ -75,7 +75,7 @@ ports:
 - 443:443
 networks:
 - back
-"""
+```
 
 Docker-compose up -d
 Docker ps -a
