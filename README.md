@@ -185,7 +185,7 @@ root@ubuntu:# docker rm dockerwp_wordpress_1
 root@ubuntu:# docker-compose up -d
 ```
 #### On mgmt01
-Wait a minute for docker to reload
-Click update now
+Wait a minute for docker to reload<br />
+Click update now<br />
 Done
 
